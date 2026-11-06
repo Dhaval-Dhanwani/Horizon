@@ -23,6 +23,7 @@
     
     height: 100vh;
     display: flex;
+    
     /* flex direction helps us to direct the element flow direction  */
     /* 1)right to left  2) left ot right  3) top-bottom  4)bottom-top */
     flex-direction: column;

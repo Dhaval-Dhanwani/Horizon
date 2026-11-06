@@ -1,0 +1,58 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #2a2b2d;
+}
+
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #5f80a2;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+  color: white;
+}
+
+h2 {
+  font-size: 24px;
+  color: white;
+}
+
+p {
+  margin: 0;
+}
+
+code {
+  font-family: monospace;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #123f65;
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}

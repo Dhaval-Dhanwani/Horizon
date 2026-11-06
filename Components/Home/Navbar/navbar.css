@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+}
+
+/* tag selector */
+nav{
+    color:red ;
+    
+}
+
+.navbar
+{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+    width: 100%; 
+    height: 100%;
+
+    background-color: burlywood;
+}
+
+.navhorizon
+{
+    width: 100px;
+    height: 55px;
+    font-size: large;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactDetails
+{
+    width: 200px;
+     height: 100%; 
+    /* set alignment of element vertically */
+    align-items: center;
+    font-size: 19px;
+    background-color: aquamarine;
+    display: flex;
+    /* align text horizontally */
+    justify-content: space-around;
+}

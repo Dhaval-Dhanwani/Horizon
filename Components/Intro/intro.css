@@ -1,0 +1,40 @@
+.intro {
+    width: 100vw;
+    height: 100vh;
+    background: #0a0a0a;
+
+    /* // spaceevenly  spacearound spacebetween */
+    display: flex; 
+    justify-content: center;
+
+    align-items: center; 
+    overflow: hidden; 
+}
+
+.horizon-group {
+   
+    height: 220PX;
+    width: 850PX;
+  
+    /* // display defines the element type-> inline or full size block elemt */
+    display: flex;  
+    flex-direction: column;
+    padding-top: 60px;
+    /* right  center left position of the element in his area */
+    align-items: center; 
+}
+
+.horizon {
+    /* margin is the outer space from the element */
+    margin: 0;
+    color: white;
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    transform-origin: center; 
+}
+
+.comfort {
+    font-size: 19px;
+    color: #ebebf3;
+}

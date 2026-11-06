@@ -14,7 +14,7 @@ export function Login()
             setShowOTP(true)
         },50)
     }
-
+    
     return (
         <>
             <Link className={styles.back} onClick={()=>navigate(-1)}>Back</Link>

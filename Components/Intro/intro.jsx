@@ -1,10 +1,24 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import "../Intro/intro.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useEffect } from "react";
 
 export function Intro() {
+
+    const[val,setVal]=useState(0)
+
+    useEffect(()=>
+    {
+        axios.get('/api/homie')
+                            .then((response)=> {
+                                console.log("backend is sending")
+                                setVal(1)
+                            })
+                            .catch((error)=>console.log("database in not connected"))
+    },[])
 
     let navigator=useNavigate()
 

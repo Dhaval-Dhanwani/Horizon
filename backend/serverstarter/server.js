@@ -1,24 +1,29 @@
-import express from 'express'
-import { dbconfig } from '../dbconfig/dbconfig.js';
+    import express from 'express'
+    import { dbconfig } from '../dbconfig/dbconfig.js';
+    import 'dotenv/config'
 
+    // config the cors and cookie-parse learn--> this is remaing task
+    let app=express();
 
-const PORT=3000;
+    (
+        async function()
+        {
+            await dbconfig();
 
-let app=express();
+            // allow the json data 
+            app.use(express.json())
+            
+            //to allow the form data to come from frontend
+            app.use(express.urlencoded({extended:false}))
 
-(
-    async function()
-    {
-        await dbconfig();
+            
+            app.get('/api/homie',(req,res)=>
+            {
+                res.status(200).send('hello');
+            })
 
-        // allow the json data 
-        app.use(express.json())
-        
-        //to allow the form data to come from frontend
-        app.use(express.urlencoded({extended:false}))
-
-        app.listen(PORT,()=>{
-            console.log(`Server is running in ${PORT}`)
-        })
-    }
-)()
+            app.listen(`${process.env.PORT}`,()=>{
+                console.log(`Server is running in ${process.env.PORT}`)
+            })
+        }
+    )()
